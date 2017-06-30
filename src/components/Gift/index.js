@@ -81,7 +81,7 @@ class Gift extends React.Component {
               {
                 gift.image ?
                   <div className='offset-lg-3 col-lg-6'>
-                    <img className='img-fluid' src={gift.image} alt={`Provided by ${gift.provider.username}`} />
+                    <img className='img-fluid' src={gift.image} alt={`此圖由${gift.provider.username}提供`} />
                   </div>
                 : null
               }

@@ -157,7 +157,7 @@ class Settings extends React.Component {
                         <img
                           className='img-fluid'
                           src={ currentUser.proPic ? this.props.currentUser.proPic : 'https://photouploads.com/images/350646.png' }
-                          alt={`${currentUser.username}'s proPic`} /><br />
+                          alt={`${currentUser.username}的個人資料相片`} /><br />
                       </div>
                     </div>
                   </div>

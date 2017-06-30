@@ -7,7 +7,7 @@ const ReceiverList = props => {
       接收者:&nbsp;
       {
         receiver.username === props.gift.provider.username ?
-        <i>暫未有人領取該「順便」:)</i>
+        <i>暫未有人領取:)</i>
         :
         <div>
           <img src={receiver.proPic} alt={receiver.username} />&nbsp;&nbsp;

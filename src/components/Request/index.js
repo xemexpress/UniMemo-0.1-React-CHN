@@ -123,7 +123,7 @@ class Request extends React.Component {
               {
                 request.image ?
                   <div className='offset-lg-3 col-lg-6'>
-                    <img className='img-fluid' src={request.image} alt={`Provided by ${request.poster.username}`} />
+                    <img className='img-fluid' src={request.image} alt={`此圖由${request.poster.username}提供`} />
                   </div>
                 : null
               }

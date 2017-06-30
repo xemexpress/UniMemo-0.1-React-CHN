@@ -62,7 +62,7 @@ class GiftActions extends React.Component {
           <Link
             to={`giftEditor/${gift.giftId}`}
             className='btn btn-sm btn-outline-secondary'>
-            <i className='ion-edit'></i>&nbsp;Edit Gift
+            <i className='ion-edit'></i>&nbsp;編輯內容
           </Link>
           &nbsp;&nbsp;&nbsp;
           <button
@@ -70,15 +70,15 @@ class GiftActions extends React.Component {
             onClick={this.handleSwitch(gift)}>
             {
               gift.tagList.indexOf('personal') !== -1 ?
-              <i>Switch to public. (Allowing receiver to let it go public)</i>
-              : <i>Switch back to personal</i>
+              <i>轉至「可公開」（容許接收者讓其他人使用）</i>
+              : <i>轉至「僅接收者可見」</i>
             }
           </button>
           &nbsp;&nbsp;&nbsp;
           <button
             className='btn btn-sm btn-outline-danger'
             onClick={this.handleDel(gift)}>
-            <i className='ion-trash-a'></i>&nbsp;Delete Gift
+            <i className='ion-trash-a'></i>&nbsp;刪除
           </button>
         </span>
       )
@@ -89,22 +89,22 @@ class GiftActions extends React.Component {
             className='btn btn-sm btn-outline-info'
             onClick={this.handleReceive(gift)}>
             {
-              isReceiver ? <span><i className='ion-log-in'></i>&nbsp;Return. Thanks!</span>
-              : <span><i className='ion-log-out'></i>&nbsp;Receive</span>
+              isReceiver ? <span><i className='ion-log-in'></i>&nbsp;請送返。多謝！</span>
+              : <span><i className='ion-log-out'></i>&nbsp;領取使用</span>
             }
           </button>
           &nbsp;&nbsp;&nbsp;
           {
             !isReceiver ? null : gift.tagList.indexOf('personal') !== -1 ?
-            <i>This Gift can't be switched to public</i>
+            <i>僅我使用</i>
             :
             <button
               className='btn btn-sm btn-outline-danger'
               onClick={this.handleSwitch(gift)}>
               {
                 gift.tagList.indexOf('public') !== -1 ?
-                <i>Switch to openPublic</i>
-                : <i>Switch back to public</i>
+                <i>轉至「公開」</i>
+                : <i>轉至「僅自己可見」</i>
               }
             </button>
           }

@@ -143,13 +143,13 @@ class GiftEditor extends React.Component {
                     <textarea
                       className='form-control form-control-lg'
                       rows='5'
-                      placeholder='What could this gift offer'
+                      placeholder='你可以順便做到什麼？'
                       value={this.props.text}
                       onChange={this.changeText} />
                   </fieldset>
 
                   <label htmlFor='toggle'>
-                    <i>Optional:</i> Set its receiver
+                    <i>可選：</i> 填寫接收者
                   </label>
                   &nbsp;&nbsp;
                   <input
@@ -160,12 +160,12 @@ class GiftEditor extends React.Component {
 
                   <div id='expand'>
                     <div>
-                      <i>Notes:</i>
-                      <p>- If it's your username, it hasn't been sent yet, </p>
-                      <p>- Please ensure the username is <strong>spelt right</strong>.</p>
+                      <i>注意事項：</i>
+                      <p>- 如果接受者是你的用戶名，表示此「順便」未被發出</p>
+                      <p>- 請確保用戶名<strong>填寫正確</strong></p>
                     </div>
                     <fieldset className='form-group'>
-                      <strong>Receiver:</strong>
+                      <strong>接收者:</strong>
                       <input
                         className='form-control form-control-lg'
                         type='text'
@@ -176,7 +176,7 @@ class GiftEditor extends React.Component {
 
 
                   <fieldset className='form-group'>
-                    <strong>Available before:</strong>
+                    <strong>使用限期:</strong>
                     <input
                       className='form-control form-control-lg'
                       type='datetime-local'
@@ -184,7 +184,7 @@ class GiftEditor extends React.Component {
                       onChange={this.changeExpireAt} />
                   </fieldset>
 
-                  <strong>Tags:</strong>
+                  <strong>標籤:</strong>
                   <div className='row'>
                     <div className='col-md-3 col-xs-12'>
                       <fieldset className='form-control form-control-label radio'>
@@ -193,14 +193,14 @@ class GiftEditor extends React.Component {
                             type='radio'
                             value='personal'
                             checked={this.props.access === 'personal'}
-                            onChange={this.changeAccess} /> personal
+                            onChange={this.changeAccess} /> 僅接收者可見
                         </label><br />
                         <label>
                           <input
                             type='radio'
                             value='public'
                             checked={this.props.access === 'public'}
-                            onChange={this.changeAccess} /> public
+                            onChange={this.changeAccess} /> 可公開
                         </label><br />
                       </fieldset>
                       <div className='tag-list'>
@@ -215,7 +215,7 @@ class GiftEditor extends React.Component {
                         <input
                           className='form-control form-control-lg'
                           rows='2'
-                          placeholder='Enter tags. Suggest one from &#39;giveOrLend&#39;, &#39;delivering&#39; & &#39;know&#39;(knowledge)'
+                          placeholder='Enter tags. 建議標籤：giveOrLend, delivering, know(knowledge) ...'
                           // except status tags, e.g. personal, public, openPublic
                           value={this.props.tagInput}
                           onChange={this.changeTagInput}
@@ -226,7 +226,7 @@ class GiftEditor extends React.Component {
                     </div>
                   </div>
 
-                  <strong>Image:</strong>
+                  <strong>相片:</strong>
                   <div className='row'>
                     <div className='col-xs-12'>
                       <ImageUpload
@@ -240,7 +240,7 @@ class GiftEditor extends React.Component {
                     type='button'
                     onClick={this.submitForm}
                     disabled={this.props.inProgress}>
-                    { this.props.giftId ? 'Update' : 'Post' } Gift
+                    { this.props.giftId ? '更新' : '分享' } 「順便」
                   </button>
                 </fieldset>
               </form>

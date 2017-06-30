@@ -14,9 +14,9 @@ const GiftPreview = props => {
       <Link to={`gift/${gift.giftId}`} className='preview-link'>
         <h1>{gift.text}</h1>
 
-        <p>Before:&nbsp;{new Date(gift.expireAt).toDateString()}</p>
+        <p>最後限期:&nbsp;{new Date(gift.expireAt).toLocaleString('chinese').slice(0, -3)}</p>
 
-        <span>Read more...</span>
+        <span>了解更多...</span>
 
         <TagList unit={gift} />
       </Link>

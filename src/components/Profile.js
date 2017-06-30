@@ -20,7 +20,7 @@ const EditProfileSettings = props => {
       <Link
         className='btn btn-sm btn-outline-secondary action-btn'
         to='settings'>
-        <i className='ion-gear-a'></i>&nbsp;Edit Profile Settings
+        <i className='ion-gear-a'></i>&nbsp;更新資料
       </Link>
     )
   }
@@ -47,7 +47,7 @@ const FollowUserButton = props => {
       onClick={handleFollow}>
       <i className='ion-android-hand'></i>&nbsp;
       {
-        props.user.favoring ? 'Unfavor' : 'Favor'
+        props.user.favoring ? '取消關注' : '關注'
       }
     </button>
   )
@@ -118,7 +118,7 @@ class Profile extends React.Component {
             <Link
               className='nav-link'
               to={`@${this.props.profile.username}/taken`}>
-              <i className='ion-ios-analytics-outline'></i>&nbsp;My Undertakings
+              <i className='ion-ios-analytics-outline'></i>&nbsp;我接下的委託
             </Link>
           </li>
           : null
@@ -128,7 +128,7 @@ class Profile extends React.Component {
           <Link
             className='nav-link active'
             to={`@${this.props.profile.username}`}>
-            <i className='ion-ios-pulse-strong'></i>&nbsp;My Requests
+            <i className='ion-ios-pulse-strong'></i>&nbsp;散出的委託
           </Link>
         </li>
 
@@ -136,7 +136,7 @@ class Profile extends React.Component {
           <Link
             className='nav-link'
             to={`@${this.props.profile.username}/wishes`}>
-            <i className='ion-help-buoy'></i>&nbsp;Wished Requests
+            <i className='ion-help-buoy'></i>&nbsp;wish過的委託
           </Link>
         </li>
       </ul>

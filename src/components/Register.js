@@ -62,7 +62,7 @@ class Register extends React.Component {
         this.setState({ error: '' })
         this.props.onSubmit(username, email, password)
       }else{
-        this.setState({ error: 'Please confirm your password again:)' })
+        this.setState({ error: '密碼不一致，請再次重新輸入:)' })
       }
     }
   }
@@ -84,12 +84,13 @@ class Register extends React.Component {
             <div className='col-md-6 offset-md-3 col-xs-12'>
 
               <h1 className='text-xs-center'>
-                Sign up
+                註冊
               </h1>
 
               <p className='text-xs-center'>
+                <small>已經註冊？</small>
                 <Link to='login'>
-                  Have an account?
+                  登入
                 </Link>
               </p>
 
@@ -107,7 +108,7 @@ class Register extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='text'
-                      placeholder='Username'
+                      placeholder='用戶名'
                       value={username}
                       onChange={this.changeUsername} />
                   </fieldset>
@@ -116,7 +117,7 @@ class Register extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='email'
-                      placeholder='Email'
+                      placeholder='電郵地址'
                       value={email}
                       onChange={this.changeEmail} />
                   </fieldset>
@@ -125,7 +126,7 @@ class Register extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='password'
-                      placeholder='Password'
+                      placeholder='密碼'
                       value={password}
                       onChange={this.changePassword} />
                   </fieldset>
@@ -134,7 +135,7 @@ class Register extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='password'
-                      placeholder='Confirm Password'
+                      placeholder='確認密碼'
                       value={confirm}
                       onChange={this.changeConfirm} />
                   </fieldset>
@@ -143,7 +144,7 @@ class Register extends React.Component {
                     className='btn btn-lg btn-primary pull-xs-right'
                     type='submit'
                     disabled={this.props.inProgress}>
-                    Sign up
+                    註冊
                   </button>
 
                 </fieldset>

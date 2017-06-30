@@ -61,12 +61,13 @@ class Login extends React.Component {
             <div className='col-md-6 offset-md-3 col-xs-12'>
 
               <h1 className='text-xs-center'>
-                Sign In
+                登入
               </h1>
 
               <p className='text-xs-center'>
+                <small>未註冊？</small>
                 <Link to='register'>
-                  Need an account?
+                  立即註冊
                 </Link>
               </p>
 
@@ -79,7 +80,7 @@ class Login extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='email'
-                      placeholder='Email'
+                      placeholder='電子郵件'
                       value={email}
                       onChange={this.changeEmail} />
                   </fieldset>
@@ -88,7 +89,7 @@ class Login extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='password'
-                      placeholder='Password'
+                      placeholder='密碼'
                       value={password}
                       onChange={this.changePassword} />
                   </fieldset>
@@ -97,7 +98,7 @@ class Login extends React.Component {
                     className='btn btn-lg btn-primary pull-xs-right'
                     type='submit'
                     disabled={this.props.inProgress}>
-                    Sign In
+                    登入
                   </button>
 
                 </fieldset>

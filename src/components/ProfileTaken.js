@@ -44,14 +44,14 @@ class ProfileTaken extends Profile {
               <Link
                 className={this.state.content === 'myTakens' ? 'nav-link active' : 'nav-link'}
                 onClick={takens(this.props.profile.username)}>
-                <i className='ion-android-checkbox-outline'></i>&nbsp;Confirmed
+                <i className='ion-android-checkbox-outline'></i>&nbsp;已確定的委託
               </Link>
             </li>
             <li className='nav-item'>
               <span
                 className={this.state.content === 'myOngoings' ? 'nav-link active' : 'nav-link'}
                 onClick={ongoings}>
-                <i className='ion-android-time'></i>&nbsp;Waiting
+                <i className='ion-android-time'></i>&nbsp;待確定的委託
               </span>
             </li>
           </span>
@@ -62,7 +62,7 @@ class ProfileTaken extends Profile {
           <Link
             className='nav-link'
             to={`@${this.props.profile.username}`}>
-            <i className='ion-ios-pulse-strong'></i>&nbsp;My Requests
+            <i className='ion-ios-pulse-strong'></i>&nbsp;散出的委託
           </Link>
         </li>
 
@@ -70,7 +70,7 @@ class ProfileTaken extends Profile {
           <Link
             className='nav-link'
             to={`@${this.props.profile.username}/wishes`}>
-            <i className='ion-help-buoy'></i>&nbsp;Wished Requests
+            <i className='ion-help-buoy'></i>&nbsp;wish過的委託
           </Link>
         </li>
       </ul>

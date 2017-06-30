@@ -210,7 +210,7 @@ class RequestEditor extends React.Component {
                     <input
                       className='form-control form-control-lg'
                       type='text'
-                      placeholder='建議&#39;delivering&#39;, &#39;production&#39; & &#39;shopping&#39;'
+                      placeholder='Enter tags. 建議標籤：delivering, production, shopping ...'
                       // except status tags, e.g. ongoing, ongoing-taken, done
                       value={this.props.tagInput}
                       onChange={this.changeTagInput}

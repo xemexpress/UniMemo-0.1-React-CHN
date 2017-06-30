@@ -4,17 +4,17 @@ const ReceiverList = props => {
   const receiver = props.gift.receiver
   return (
     <div className='article-meta'>
-      Receiver:&nbsp;
+      接收者:&nbsp;
       {
         receiver.username === props.gift.provider.username ?
-        <i>No one take it from the provider... yet:)</i>
+        <i>暫未有人領取該「順便」:)</i>
         :
         <div>
           <img src={receiver.proPic} alt={receiver.username} />&nbsp;&nbsp;
           {receiver.username}
           {
             receiver.username === props.currentUser.username ?
-            '. You\'re the receiver'
+            '. 你已接收此「順便」'
             : null
           }
         </div>

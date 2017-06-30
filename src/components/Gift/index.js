@@ -46,10 +46,10 @@ class Gift extends React.Component {
       <div>
         ${
           gift.provider.username === this.props.currentUser.username ?
-          'People could use it before: '
-          : 'You may use it before: '
+          '最後限期: '
+          : '你可在此日期前使用: '
         }
-        <strong>${new Date(gift.expireAt).toDateString()}</strong>
+        <strong>${new Date(gift.expireAt).toLocaleString('chinese').slice(0, -3)}</strong>
       </div>
     `
 

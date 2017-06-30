@@ -13,7 +13,7 @@ export const CollectionTab = props => {
         <a
           className={props.tab === 'collect' ? 'nav-link active' : 'nav-link'}
           onClick={handleCollect}>
-          <i className='ion-earth'></i>&nbsp;你嘅圈子
+          <i className='ion-earth'></i>&nbsp;我的圈子
         </a>
       </li>
     )
@@ -31,7 +31,7 @@ export const GlobalFeedTab = props => {
       <a
         className={props.tab === 'all' ? 'nav-link active' : 'nav-link'}
         onClick={handleAll}>
-        <i className='ion-planet'></i>&nbsp;大家嘅委託
+        <i className='ion-planet'></i>&nbsp;大家的委託
       </a>
     </li>
   )

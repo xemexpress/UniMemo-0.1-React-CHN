@@ -61,7 +61,7 @@ class Home extends React.Component {
 
               <div className='col-sm-3 col-xs-12'>
                 <div className='sidebar'>
-                  <p>最Hot</p>
+                  <p>Popular Tags</p>
 
                   <Tags
                     tagType={this.props.tagType}

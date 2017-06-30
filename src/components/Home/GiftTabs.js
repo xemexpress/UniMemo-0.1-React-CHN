@@ -23,14 +23,14 @@ export class ProvideTab extends React.Component {
             <a
               className={this.props.tab === 'provide-sent' ? 'nav-link active' : 'nav-link'}
               onClick={this.props.tab !== 'provide-sent' ? this.handleProvide('provide-sent') : null}>
-              <i className='ion-android-send'></i>&nbsp;Gifts I've sent
+              <i className='ion-android-send'></i>&nbsp;我已分享的「順便」
             </a>
           </li>
           <li className='nav-item'>
             <a
               className={this.props.tab === 'provide-nSent' ? 'nav-link active' : 'nav-link'}
               onClick={this.props.tab !== 'provide-nSent' ? this.handleProvide('provide-nSent') : null}>
-              <i className='ion-cube'></i>&nbsp;Gifts not sent
+              <i className='ion-cube'></i>&nbsp;我的待用「順便」
             </a>
           </li>
         </div>
@@ -41,7 +41,7 @@ export class ProvideTab extends React.Component {
           <a
             className='nav-link'
             onClick={this.handleProvide('provide-sent')}>
-            <i className='ion-wand'></i>&nbsp;Gifts I provide
+            <i className='ion-wand'></i>&nbsp;我的順便
           </a>
         </li>
       )
@@ -70,14 +70,14 @@ export class ReceiveTab extends React.Component {
             <a
               className={this.props.tab === 'receive-received' ? 'nav-link active' : 'nav-link'}
               onClick={this.props.tab !== 'receive-received'? this.handleReceive('receive-received') : null}>
-              <i className='ion-waterdrop'></i>&nbsp;Gifts I've received
+              <i className='ion-waterdrop'></i>&nbsp;我已接的「順便」
             </a>
           </li>
           <li className='nav-item'>
             <a
               className={this.props.tab === 'receive-nReceived' ? 'nav-link active' : 'nav-link'}
               onClick={this.props.tab !== 'receive-nReceived' ? this.handleReceive('receive-nReceived') : null}>
-              <i className='ion-bonfire'></i>&nbsp;Gifts I could get
+              <i className='ion-bonfire'></i>&nbsp;待用「順便」
             </a>
           </li>
         </div>
@@ -88,7 +88,7 @@ export class ReceiveTab extends React.Component {
           <a
             className='nav-link'
             onClick={this.handleReceive('receive-received')}>
-            <i className='ion-umbrella'></i>&nbsp;Gifts I could use
+            <i className='ion-umbrella'></i>&nbsp;大家的「順便」
           </a>
         </li>
       )

@@ -64,47 +64,47 @@ class SettingsForm extends React.Component {
     return (
       <form onSubmit={this.submitForm}>
         <fieldset>
-          <strong>Username:</strong>
+          <strong>用戶名稱:</strong>
           <fieldset className='form-group'>
             <input
               className='form-control form-control-lg'
               type='text'
-              placeholder='username'
+              placeholder='用戶名稱'
               value={this.state.username}
               onChange={this.updateState('username')} />
           </fieldset>
 
-          <strong>Password:</strong>
+          <strong>密碼:</strong>
           <fieldset className='form-group'>
             <input
               className='form-control form-control-lg'
               type='password'
-              placeholder='New Password'
+              placeholder='新密碼'
               value={this.state.password}
               onChange={this.updateState('password')} />
           </fieldset>
 
-          <strong>Bio:</strong>
+          <strong>關於我:</strong>
           <fieldset className='form-group'>
             <textarea
               className='form-control form-control-lg'
               rows='8'
-              placeholder='Short bio about you'
+              placeholder='關於我'
               value={this.state.bio}
               onChange={this.updateState('bio')} />
           </fieldset>
 
-          <strong>Mobile No.:</strong>
+          <strong>電話號碼:</strong>
           <fieldset className='form-group'>
             <input
               className='form-control form-control-lg'
               type='tel'
-              placeholder='Mobile Number'
+              placeholder='電話號碼'
               value={this.state.mobileNum}
               onChange={this.updateState('mobileNum')} />
           </fieldset>
 
-          <i>Update your Profile Pic:</i>
+          <i>更新個人資料相片:</i>
           <ImageUpload
             image={this.state.proPic}
             changeImage={this.uploadImage} /><br />
@@ -113,7 +113,7 @@ class SettingsForm extends React.Component {
             className='btn btn-lg btn-primary pull-xs-right'
             type='submit'
             disabled={this.props.inProgress}>
-            Update Settings
+            更新個人資料
           </button>
         </fieldset>
       </form>
@@ -147,7 +147,7 @@ class Settings extends React.Component {
               <div className='col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-xs-12'>
 
                   <div className='text-xs-center'>
-                    <h1>Your Settings</h1>
+                    <h1>個人資料</h1>
 
                     <i className='ion-star'></i> {currentUser.yellowStars}&nbsp;&nbsp;
 
@@ -175,7 +175,7 @@ class Settings extends React.Component {
                   <button
                     className='btn btn-outline-danger'
                     onClick={this.props.onClickLogout}>
-                    Or click here to logout.
+                    登出
                   </button>
 
               </div>

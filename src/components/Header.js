@@ -75,7 +75,7 @@ class LoggedInView extends React.Component {
 
           <li className='nav-item'>
             <Link to='settings' className='nav-link'>
-              <i className='ion-gear-a'></i>&nbsp;個人設置
+              <i className='ion-gear-a'></i>&nbsp;個人資料
             </Link>
           </li>
 
